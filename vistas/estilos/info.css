@@ -1,0 +1,77 @@
+
+.seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    text-align: center;
+    margin: 0 40px;
+}
+.card h1{
+    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.card h2{
+    margin-top: 0;
+}
+.mision,
+.vision {
+    flex-basis: calc(50% - 10px);
+    margin-right: 10px;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.card1 {
+    margin: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mision h2,
+.vision h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: blue;
+}
+.mision p,
+.vision p {
+    margin-top: 3px;
+}
+.card h2{
+    font-size: 20px;
+    color: #7f7f8a;
+}
+.card2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.card2 h2 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.card2 h3 {
+    flex-basis: calc(25% - 10px);
+    text-align: center;
+    margin: 0;
+}
+
+.card2 h3 p {
+    margin: 5px;
+    font-size: 13px;
+}

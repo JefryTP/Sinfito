@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/clima.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-container ">
+    <input id="txtciudad" type="text" placeholder="Ingrese la ciudad">
+    <button id="btn_clima">Consultar</button>
+    <div class="info-clima">
+    </div>
+</div>
+</body>
+<script>
+    let Button = document.getElementById('btn_clima');
+    let ciudadInput = document.getElementById('txtciudad');
+    
+    Button.addEventListener('click', function () {
+        let clima = ciudadInput.value.trim();
+        if (clima === '' || /\d/.test(clima)) {
+        alert('Ciudad inválida. Por favor, ingrese una ciudad válida sin números.');
+        return;
+    }
+
+        $.ajax({
+            url: 'http://api.openweathermap.org/data/2.5/weather',
+            data: {
+                mode: 'html',
+                q: clima,
+                appid: 'd4ab91e35a0b31938b495131150a3b10'
+            },
+            success: function (data) {
+                var divInfoClima = document.querySelector('.info-clima');
+                divInfoClima.innerHTML = data;
+            },
+            error: function (xhr, status, error) {
+            alert('Error al obtener los datos del clima desde la API: ' + error);
+        }
+        });
+    });
+</script>
+</html>

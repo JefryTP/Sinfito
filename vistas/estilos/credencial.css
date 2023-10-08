@@ -1,0 +1,83 @@
+
+.carnet {
+    padding: 10px;
+    background-color: #264186;
+    border-radius: 30px;
+    width: 500px;
+    height: 280px;
+    margin: 5% auto auto auto;
+    display: flex;
+}
+.foto{
+    width: 35%;
+    height: auto;
+}
+.foto h1{
+    margin-top: 10%;
+    border-radius: 30px;
+    width: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.foto img{
+    padding: 10px 80px 0 0px;
+    width: 100%;
+    height: auto;
+}
+.imagen{
+    border-radius: 5px;
+    width: 100%;
+    height: 70%;
+    background-color: white;
+}
+.imagen img{
+    height: 100%;
+    width: auto;
+}
+.datos{
+    margin-left: 10px;
+    width: 32%;
+    height: auto;
+}
+.datos h1{
+    color: white;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    font-size: 15px;
+}
+.datos p{
+    color: white;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    font-size: 12px;
+}
+#nombres{
+    margin-top: 30%;
+}
+.hora{
+    width: 33%;
+    height: auto;
+    color: white;
+    font-weight: bolder;
+}
+#hora-actual{
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
+#fecha-actual{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.hora img{
+    margin-left: 30%;
+    height: 50%;
+    transform:rotate(270deg);
+}

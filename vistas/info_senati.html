@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/info.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="seccion">
+        <div class="card">
+            <h1>Nosotros</h1>
+            <h2>SENATI es una institución creada por la Sociedad Nacional de Industrias.</h2>
+            <p>Los empresarios fundadores instituyeron una organización educativa dinámica y flexible, dirigida y
+                solventada
+                por el sector productivo, con el fin de responder con pertinencia y eficacia a las demandas de
+                calificación
+                profesional del mercado laboral.</p>
+        </div>
+        <div class="card1">
+            <div class="mision">
+                <h2>Nuestra misión</h2>
+                <p>Formar profesionales técnicos innovadores y altamente productivos.</p>
+            </div>
+            <div class="vision">
+                <h2>Nuestra visión</h2>
+                <p>Liderar en América Latina, la excelencia en formación profesional tecnológica.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <h2>Conoce más de SENATI</h2>
+            <h3>RUC: <p id="txtruc"></p></h3>
+            <h3>Razon Social: <p id="txtrazon"></p></h3>
+            <h3>Direccion: <p id="txtdire"></p></h3>
+            <h3>Ubigeo: <p id="txtubi"></p></h3>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+    let ruc = localStorage.getItem('ruc');
+    let ubigeo = localStorage.getItem('ubigeo');
+    let razonSocial = localStorage.getItem('razonSocial');
+    let direccion = localStorage.getItem('direccion');
+    $('#txtruc').text(ruc);
+    $('#txtubi').text(ubigeo);
+    $('#txtrazon').text(razonSocial);
+    $('#txtdire').text(direccion);
+});
+</script>
+</html>

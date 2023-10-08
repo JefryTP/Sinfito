@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/credencial.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="carnet">
+        <div class="foto">
+            <h1>Estudiante</h1>
+            <div class="imagen">
+                <img src="../img/usuario.png" alt="usuario.png">
+            </div>
+            <img src="../img/logo-sinfito.png" alt="logo-senati.png" />
+        </div>
+        <div class="datos">
+            <h1 id="nombres"></h1>
+            <h1 id="apellidoPaterno"></h1>
+            <h1 id="apellidoMaterno"></h1>
+            <p>Ing. de Software con IA</p>
+            <p>DNI: <p id="n_dni"></p></p>
+        </div>
+        <div class="hora">
+            <div id="hora-actual"></div>
+            <div id="fecha-actual"></div>
+            <img src="../img/somos_futuro.png" alt="somos_futuro.png">
+        </div>
+    </div>
+</body>
+<script>
+
+$(document).ready(function() {
+    let nombres = localStorage.getItem('nombres');
+    let apellidoPaterno = localStorage.getItem('apellidoPaterno');
+    let apellidoMaterno = localStorage.getItem('apellidoMaterno');
+    let dni = localStorage.getItem('dni');
+    $('#nombres').text(nombres);
+    $('#apellidoPaterno').text(apellidoPaterno);
+    $('#apellidoMaterno').text(apellidoMaterno);
+    $('#n_dni').text(dni);
+});
+    function actualizarHora() {
+        const divFecha = document.getElementById("fecha-actual");
+        const divHora = document.getElementById("hora-actual");
+        if (divFecha && divHora) {
+            const fecha = new Date();
+        const dia = (fecha.getDay()+1).toString().padStart(2,"0");
+        const mes = (fecha.getMonth()+1).toString().padStart(2,"0");
+        const año = fecha.getFullYear().toString();
+        const hora = fecha.getHours().toString().padStart(2, "0");
+        const minutos = fecha.getMinutes().toString().padStart(2, "0");
+        const segundos = fecha.getSeconds().toString().padStart(2, "0");
+        const horaActual = `${hora}:${minutos}:${segundos}`;
+        const fechaActual = `${dia}-${mes}-${año}`;
+        divHora.textContent = horaActual;
+        divFecha.textContent = fechaActual;
+        }
+    }
+    setInterval(actualizarHora, 1000);
+    actualizarHora();
+</script>
+</html>
